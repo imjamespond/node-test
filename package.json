@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "truffle": "^4.1.14"
+  },
+  "dependencies": {
+    "web3": "^1.0.0-beta.36"
+  }
+}
