@@ -103,7 +103,7 @@ contract bitfwdToken is ERC20Interface, Owned, SafeMath {
     string public symbol;
     string public  name;
     uint8 public decimals;
-    uint public _totalSupply = 100;
+    uint public _totalSupply = 0;
     uint public startDate;
     uint public bonusEnds;
     uint public endDate;
