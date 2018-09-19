@@ -1,4 +1,4 @@
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.24;
 
 // ----------------------------------------------------------------------------
 // 'learn coin' CROWDSALE token contract
@@ -11,7 +11,7 @@ pragma solidity ^0.4.18;
 //
 // Enjoy.
 //
-// (c) by chen ying. The MIT Licence.
+// (c) by Chen Ying. The MIT Licence.
 // ----------------------------------------------------------------------------
 
 
@@ -115,15 +115,14 @@ contract LenToken is ERC20Interface, Owned, SafeMath {
     // ------------------------------------------------------------------------
     // Constructor
     // ------------------------------------------------------------------------
-    constructor(
-        uint256 initialSupply
-    ) public {
+    constructor() public {
         symbol = "LEN";
         name = "len Token";
         decimals = 18;
         bonusEnds = now + 1 weeks;
         endDate = now + 7 weeks;
 
+        uint256 initialSupply = 100000000;
         _totalSupply = initialSupply * 10 ** uint256(decimals); // Update total supply with the decimal amount
         balances[msg.sender] = _totalSupply;                    // Give the creator all initial tokens
     }
